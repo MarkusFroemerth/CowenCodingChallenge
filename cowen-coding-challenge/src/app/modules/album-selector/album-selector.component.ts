@@ -26,7 +26,8 @@ export class AlbumSelectorComponent implements OnInit {
     public fetchAlbums(userId: number) {
         fetch('http://jsonplaceholder.typicode.com/user/' + userId + '/albums')
             .then(response => response.json())
-            .then(json => this.albums = json);
+            .then(json => this.albums = json)
+            .catch(error => console.log(error));
     }
 
     public onAlbumChanged(event: any) {
