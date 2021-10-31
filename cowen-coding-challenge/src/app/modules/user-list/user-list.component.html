@@ -1,4 +1,4 @@
 <p>Following Users are listed in our system:</p>
 <ol>
-    <li *ngFor="let user of users">user.name</li>
+    <li *ngFor="let user of users"><app-user [user]="user"></app-user></li>
 </ol>
