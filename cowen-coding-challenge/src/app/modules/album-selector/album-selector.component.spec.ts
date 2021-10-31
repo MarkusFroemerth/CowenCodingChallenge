@@ -17,6 +17,7 @@ describe('AlbumSelectorComponent', () => {
                 fixture.ngOnInit();
 
                 expect(fetchAlbumsSyp).toHaveBeenCalledWith(userId);
+                // expect(fixture.albums.length).toBe(10);
             })
         })
     })
