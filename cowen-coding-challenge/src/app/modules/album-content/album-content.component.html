@@ -3,6 +3,6 @@
         {{ album.title }}
     </div>
     <div class="card-body">
-        <img [src]="tbUrl" *ngFor="let tbUrl of getThumbnailUrls()" />
+        <img [src]="photo.thumbnailUrl" (click)="showPhoto(photo.url)" *ngFor="let photo of photosList" />
     </div>
 </div>

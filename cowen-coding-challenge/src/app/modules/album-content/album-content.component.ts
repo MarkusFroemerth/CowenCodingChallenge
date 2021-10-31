@@ -21,13 +21,14 @@ export class AlbumContentComponent implements OnInit, OnChanges {
         }
     }
 
-    public getThumbnailUrls() {
-        return this.photosList.map((p: Photo) => p.thumbnailUrl);
-    }
-
     public fetchFotos(albumId: number) {
         fetch('http://jsonplaceholder.typicode.com/albums/' + albumId + '/photos')
             .then(response => response.json())
             .then(json => (this.photosList = json));
+    }
+
+    public showPhoto(url: string) {
+        // TODO: use some in-app way to show the picture. like a modal window
+        window.open(url);
     }
 }
