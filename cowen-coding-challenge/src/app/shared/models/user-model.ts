@@ -2,7 +2,7 @@ import { Address } from "./address-model"
 import { Company } from "./company-model";
 
 export class User {
-    declare public id: string;
+    declare public id: Number;
     declare public name: string;
     declare public username: string;
     declare public email: string;

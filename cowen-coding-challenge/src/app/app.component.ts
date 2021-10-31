@@ -7,4 +7,10 @@ import {Component} from '@angular/core';
 })
 export class AppComponent {
     title = 'cowen-coding-challenge';
+
+    public albumUserId: Number = null;
+
+    onAlbumChange(event: Event) {
+        console.log(event);
+    }
 }

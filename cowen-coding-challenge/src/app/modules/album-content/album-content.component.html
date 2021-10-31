@@ -1,0 +1,8 @@
+<div class="card" *ngIf="album">
+    <div class="card-title">
+        {{ album.title }}
+    </div>
+    <div class="card-body">
+        <img [src]="tbUrl" *ngFor="let tbUrl of getThumbnailUrls()" />
+    </div>
+</div>

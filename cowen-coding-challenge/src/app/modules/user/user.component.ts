@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
 import { User } from 'src/app/shared/models/user-model';
 
 @Component({
@@ -14,4 +14,8 @@ export class UserComponent implements OnInit {
     constructor() {}
 
     ngOnInit(): void {}
+
+    onShowAlbums() {
+        // show Albums somehow
+    }
 }
