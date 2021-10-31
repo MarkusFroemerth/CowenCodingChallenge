@@ -1,2 +1,2 @@
-<app-album-selector></app-album-selector>
-<app-album-content></app-album-content>
+<app-album-selector (albumChanged)="onAlbumChanged($event)"></app-album-selector>
+<app-album-content [album]="currentAlbum"></app-album-content>

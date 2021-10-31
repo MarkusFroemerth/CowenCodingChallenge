@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, Output, EventEmitter} from '@angular/core';
 import { Album } from 'src/app/shared/models/album.model';
 
 @Component({
@@ -10,6 +10,10 @@ export class AlbumSelectorComponent implements OnInit {
     public userId: number = 1; // TODO remove dummy
 
     public albums: Album[] = [];
+    public selectedAlbum: Album;
+
+    @Output()
+    public albumChanged: EventEmitter<Album> = new EventEmitter<Album>();
 
     constructor() {}
 
@@ -21,5 +25,11 @@ export class AlbumSelectorComponent implements OnInit {
         fetch('http://jsonplaceholder.typicode.com/user/' + userId + '/albums')
             .then(response => response.json())
             .then(json => this.albums = json);
+    }
+
+    public onAlbumChanged(event: any) {
+        let albumId = event.target.value;
+        let album = this.albums.find((a: Album) => a.id == albumId);
+        this.albumChanged.emit(album);
     }
 }

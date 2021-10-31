@@ -1,6 +1,7 @@
 <div class="col">
     <label for="albumSelect">Choose album</label>
-    <select name="albumSelect" id="albumSelect">
+    <!-- {{ album?.title }} -->
+    <select name="albumSelect" id="albumSelect" (change)="onAlbumChanged($event)">
         <option *ngFor="let album of albums" [value]="album.id">{{ album.title }}</option>
     </select>
 </div>
