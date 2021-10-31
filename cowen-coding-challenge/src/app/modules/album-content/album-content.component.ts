@@ -7,6 +7,7 @@ import {Photo} from 'src/app/shared/models/photo.model';
     templateUrl: './album-content.component.html',
     styleUrls: ['./album-content.component.scss']
 })
+
 export class AlbumContentComponent implements OnInit, OnChanges {
     @Input()
     public album: Album;

@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import { Album } from 'src/app/shared/models/album.model';
 
 @Component({
@@ -10,6 +10,9 @@ export class AlbumComponent implements OnInit {
     constructor() {}
 
     public currentAlbum: Album;
+
+    @Input()
+    public userId: number;
 
     ngOnInit(): void {}
 

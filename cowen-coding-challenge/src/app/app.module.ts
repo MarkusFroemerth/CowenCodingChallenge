@@ -9,10 +9,11 @@ import { SharedModule } from './shared/shared.module';
 import { AlbumComponent } from './modules/album/album.component';
 import { AlbumSelectorComponent } from './modules/album-selector/album-selector.component';
 import { AlbumContentComponent } from './modules/album-content/album-content.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
     declarations: [AppComponent, UserComponent, UserListComponent, AlbumComponent, AlbumSelectorComponent, AlbumContentComponent],
-    imports: [BrowserModule, AppRoutingModule, SharedModule],
+    imports: [BrowserModule, AppRoutingModule, SharedModule, NgbModule],
     providers: [],
     bootstrap: [AppComponent]
 })

@@ -1,4 +1,4 @@
-import {Component, OnInit, Output, EventEmitter} from '@angular/core';
+import {Component, OnInit, Output, EventEmitter, Input} from '@angular/core';
 import { Album } from 'src/app/shared/models/album.model';
 
 @Component({
@@ -7,7 +7,9 @@ import { Album } from 'src/app/shared/models/album.model';
     styleUrls: ['./album-selector.component.scss']
 })
 export class AlbumSelectorComponent implements OnInit {
-    public userId: number = 1; // TODO remove dummy
+
+    @Input()
+    public userId: number;
 
     public albums: Album[] = [];
     public selectedAlbum: Album;
